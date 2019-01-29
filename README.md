@@ -1,11 +1,11 @@
 # Bike Ridr!
 
 ## Tic-Tac-Toe Client
-```This is the developer documentation for a tic-tac-toe game that refers to an instructor-provided API for user authentication and game storage. Code was primarily written using HTML, SCSS (CSS) and JavaScript on the Atom text-editing platform, along with git and other software.```
+This is the developer documentation for a tic-tac-toe game that refers to an instructor-provided API for user authentication and game storage. Code was primarily written using HTML, SCSS (CSS) and JavaScript on the Atom text-editing platform, along with git and other software.
 
 ### Github Repository
-`The Github repository for this project is located here:
-<https://github.com/carlojacob/game-project-client>`
+The Github repository for this project is located here:
+<https://github.com/carlojacob/game-project-client>
 
 ### Wireframes
 Initial wireframes images:
@@ -19,7 +19,7 @@ Initial wireframes images:
 ![Wireframe image 2](https://i.imgur.com/5AZvv3k.jpg "Wireframe Image 2")
 
 ### User Stories
-```Tic-Tac-Toe user stories:
+Tic-Tac-Toe user stories:
 1. As a game player, I want to play tic-tac-toe.
 1. As a first-time player, I want to read Instructions so that I can win tic-tac-toe.
 1. As a first-time user of this game, I want to create a new account so that I can have history of my tic-tac-toe playing.
@@ -27,7 +27,7 @@ Initial wireframes images:
 1. As a returning player, I want to see how many games I have won and lost so that I can improve my win percentage.
 1. As a returning player, I want to start a new game or resume a game in progress so that I can continue to play.
 1. As a returning player, I want to change my password occasionally so that my statistics are secure.
-1. As a returning player, I want to log out of my game account so that no one else affects my statistics.```
+1. As a returning player, I want to log out of my game account so that no one else affects my statistics.
 
 ### Technologies Used
 The following technologies were used to create this project:
@@ -42,18 +42,18 @@ The following technologies were used to create this project:
 1. Curl.
 1. AJAX.
 1. Bootstrap.
-1. Instructor-provided API.`
+1. Instructor-provided API.
 
 ### Development Process and Problem-Solving
-`This project started by developing an initial project scope, which was modified as necessary during development:
+This project started by developing an initial project scope, which was modified as necessary during development:
 1. Developed wireframes for desired user interface.
 1. Made considerations for how the game board would be displayed.
 1. Placed heavy emphasis on meeting project requirements instead of making it "look good". Initially applied minimal SCSS to ensure that the user experience met requirements, and additional styling was added near completion as time permitted.
 1. Placed heavy emphasis on performing new tasks in new branches and making regular commits. Branch names explain what changes were made on that branch, and often include just one commit.
-1. I did not get to many of the stretch goals that I had looked up.``
+1. I did not get to many of the stretch goals that I had looked up.
 
 ### Improvements/Unsolved Problems
-`The following improvements could be made:
+The following improvements could be made:
 1. Improvements to interface for user-friendly experience.
 1. Modals for user inputs (authentication information).
 1. Animations on button clicks and game completion, etc.
@@ -63,4 +63,4 @@ The following technologies were used to create this project:
 1. Output additional game data on Game History request.
 1. Game History in tabular format.
 1. Create multiplayer functionality.
-1. Resolve display issues on mobile in landscape orientation.`
+1. Resolve display issues on mobile in landscape orientation.
