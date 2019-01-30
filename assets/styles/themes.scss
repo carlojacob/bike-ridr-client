@@ -1,0 +1,18 @@
+body {
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  width: 70vmin;
+}
+
+.auth-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.credentials {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}

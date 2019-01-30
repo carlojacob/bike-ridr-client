@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Bike Ridr</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,63 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <!-- div containing Title Text -->
+      <div class="title">
+        <h1>Bike Ridr</h1>
+      </div>
+
+      <!-- Sign Up and Sign In Areas -->
+      <div id="sign-up-or-in" class="container">
+        <div class="row">
+
+          <!-- Sign Up Form -->
+          <div class="col-12 col-sm-6 auth-form standard">
+            <form class="credentials" id="sign-up">
+              <input type="email" name="credentials[email]" placeholder="Email Address">
+              <input type="password" name="credentials[password]" placeholder="Enter Password">
+              <input type="password" name="credentials[password_confirmation]" placeholder="Re-enter Password">
+              <button id="sign-up-btn">Sign Up</button>
+            </form>
+          </div>
+          <!-- End Sign Up Form -->
+          <!-- Sign In Form -->
+          <div class="col-12 col-sm-6 auth-form standard">
+            <form class="credentials" id="sign-in">
+              <input type="email" name="credentials[email]" placeholder="Email Address">
+              <input type="password" name="credentials[password]" placeholder="Enter Password">
+              <button id="sign-in-btn">Sign In</button>
+            </form>
+          </div>
+          <!-- End Sign In Form -->
+        </div>
+      </div>
+      <!-- End Sign Up and Sign In Areas -->
+
+      <!-- Change Password and Sign Out Areas -->
+      <div id="change-password-sign-out" class="container">
+        <div class="row">
+
+          <!-- Change Password Form -->
+          <div class="col-12 col-sm-6 auth-form standard">
+            <form class="credentials" id="change-password">
+              <input type="password" name="passwords[old]" placeholder="Enter Old Password">
+              <input type="password" name="passwords[new]" placeholder="Enter New Password">
+              <button id="change-password-btn">Change Password</button>
+            </form>
+          </div>
+          <!-- End Change Password Form -->
+          <!-- Sign Out Form -->
+          <div class="col-12 col-sm-6 auth-form standard">
+            <form class="credentials" id="sign-out">
+              <input type="email" name="credentials[email]" placeholder="Email Address">
+              <input type="password" name="credentials[password]" placeholder="Enter Password">
+              <button id="sign-out-btn">Sign Out</button>
+            </form>
+          </div>
+          <!-- End Sign Out Form -->
+        </div>
+      </div>
+      <!-- End Sign Up and Sign In Areas -->
+
     </body>
 </html>
