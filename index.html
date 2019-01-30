@@ -109,9 +109,9 @@
               <p>Date<input type="date" name="ride[date]"></p>
               <input type="text" name="ride[location]" placeholder="Location">
               <p>Time
-                <input type="number" name="ride[HH]" placeholder="HH">
-                <input type="number" name="ride[MM]" placeholder="MM">
-                <input type="number" name="ride[ride_time]" placeholder="SS">
+                <input type="number" min="0" name="ride[HH]" placeholder="HH">
+                <input type="number" min="0" max="60" name="ride[MM]" placeholder="MM">
+                <input type="number"  min="0" max="60" name="ride[SS]" placeholder="SS">
               </p>
               <input type="number" name="ride[ride_distance]" placeholder="Distance (miles)">
               <button id="save-ride-btn">Save Ride</button>
