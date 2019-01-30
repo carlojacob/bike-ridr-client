@@ -1,7 +1,7 @@
 'use strict'
 
 // Require files referenced in this document
-// const store = require('../store')
+const store = require('../store')
 
 // Action(s) to perform on successful API request on sign up
 const onSignUpSuccess = () => {
@@ -13,11 +13,35 @@ const onSignUpFailure = () => {
   $('#user-output').text('Account Could Not Be Created')
 }
 
+// Action(s) to perform on successful API request on sign in
+const onSignInSuccess = responseData => {
+  $('#user-output').html('Successfully Signed In. Did you ride today?')
+  // $('#user-output').append('<p>Player X\'s turn<p>')
+  // // hide sign-up and sign-in container
+  // $('#sign-up-or-in').hide()
+  // // show reset and history container
+  // $(`#reset-and-history`).show()
+  // // show game board container
+  // $('#game-board').show()
+  // // show reset button
+  // $('#reset').show()
+  // // show change password and sign-out container
+  // $('#change-password-sign-out').show()
+  // store user data for current session
+  store.user = responseData.user
+  console.log(store)
+}
+
+// Action(s) to perform on failed API request on sign in
+const onSignInFailure = () => {
+  $('#user-output').text('Could Not Sign In. Please Try Again')
+}
+
 module.exports = {
   onSignUpSuccess,
-  onSignUpFailure
-  // onSignInSuccess,
-  // onSignInFailure,
+  onSignUpFailure,
+  onSignInSuccess,
+  onSignInFailure
   // onSignOutSuccess,
   // onSignOutFailure,
   // onChangePasswordSuccess,

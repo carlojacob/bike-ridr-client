@@ -18,7 +18,14 @@ const onSignUp = event => {
 
 const onSignIn = event => {
   event.preventDefault()
-  console.log('This works!')
+  const formData = getFormFields(event.target)
+
+  api.signIn(formData)
+
+    .then(ui.onSignInSuccess)
+    .catch(ui.onSignInFailure)
+
+  $('form').trigger('reset')
 }
 
 const onChangePassword = event => {
