@@ -39,9 +39,13 @@ const onChangePassword = event => {
   $('form').trigger('reset')
 }
 
-const onSignOut = event => {
+const onSignOut = () => {
   event.preventDefault()
-  console.log('This works!')
+
+  api.signOut()
+
+    .then(ui.onSignOutSuccess)
+    .catch(ui.onSignOutFailure)
 }
 
 const addAuthEventHandlers = event => {

@@ -47,13 +47,35 @@ const onChangePasswordFailure = () => {
   $('#user-output').text('Could Not Change Password. Please Try Again')
 }
 
+// Action(s) to perform on successful API request on sign out
+const onSignOutSuccess = responseData => {
+  $('#user-output').text('Successfully Signed Out. Have a Great Day!')
+  // // show sign-up and sign-in container
+  // $('#sign-up-or-in').show()
+  // // hide reset and history container
+  // $(`#reset-and-history`).hide()
+  // // hide game board container
+  // $('#game-board').hide()
+  // // hide reset button
+  // $('#reset').hide()
+  // // hide change password and sign-out container
+  // $('#change-password-sign-out').hide()
+  // remove user data for closed session
+  store.user = null
+}
+
+// Action(s) to perform on failed API request on sign out
+const onSignOutFailure = () => {
+  $('#user-output').text('Could Not Sign Out')
+}
+
 module.exports = {
   onSignUpSuccess,
   onSignUpFailure,
   onSignInSuccess,
   onSignInFailure,
   onChangePasswordSuccess,
-  onChangePasswordFailure
-  // onSignOutSuccess,
-  // onSignOutFailure
+  onChangePasswordFailure,
+  onSignOutSuccess,
+  onSignOutFailure
 }
