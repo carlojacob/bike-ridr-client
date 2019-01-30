@@ -37,13 +37,23 @@ const onSignInFailure = () => {
   $('#user-output').text('Could Not Sign In. Please Try Again')
 }
 
+// Action(s) to perform on successful API request on change password
+const onChangePasswordSuccess = formData => {
+  $('#user-output').text('Password Changed. Please Record Your New Password')
+}
+
+// Action(s) to perform on failed API request on change password
+const onChangePasswordFailure = () => {
+  $('#user-output').text('Could Not Change Password. Please Try Again')
+}
+
 module.exports = {
   onSignUpSuccess,
   onSignUpFailure,
   onSignInSuccess,
-  onSignInFailure
+  onSignInFailure,
+  onChangePasswordSuccess,
+  onChangePasswordFailure
   // onSignOutSuccess,
-  // onSignOutFailure,
-  // onChangePasswordSuccess,
-  // onChangePasswordFailure
+  // onSignOutFailure
 }
