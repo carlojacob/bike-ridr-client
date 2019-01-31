@@ -16,9 +16,10 @@ const onViewRides = () => {
 }
 
 // Function to convert H:M:S time inputs to seconds.
-const convertTimeToSeconds = formData => {
-  formData.ride.ride_time = (formData.ride.HH * 60 * 60) + (formData.ride.MM * 60) + parseInt(formData.ride.SS)
-  formData.user_id = store.user.id
+const convertFormData = formData => {
+  formData.ride.ride_time = (formData.ride.HH * 60 * 60) + (formData.ride.MM * 60) + parseFloat(formData.ride.SS)
+  formData.ride.user_id = store.user.id
+  formData.ride.ride_distance = parseFloat(formData.ride.ride_distance)
   delete formData.ride.HH
   delete formData.ride.MM
   delete formData.ride.SS
@@ -29,7 +30,11 @@ const convertTimeToSeconds = formData => {
 const onCreateRide = event => {
   event.preventDefault()
   const formData = getFormFields(event.target)
-  const rideData = convertTimeToSeconds(formData)
+  const rideData = convertFormData(formData)
+  // const pace = rideData.ride.ride_distance / rideData.ride.ride_time
+  // console.log(rideData)
+  // console.log(typeof rideData.ride.ride_time)
+  // console.log(pace)
 
   api.createRide(rideData)
     .then(ui.createRideSuccess)
