@@ -1,0 +1,9 @@
+{{#each rides as |ride|}}
+
+  <section data-id="{{ride.id}}">
+    <div>
+      <p>{{ride.date}} {{limit ride.location 10}} {{ride.ride_distance}} {{ride.HH}}:{{ride.MM}}:{{ride.SS}} <button edit-btn-id="edit-btn-{{ride.id}}">Edit</button><button delete-btn-id="delete-btn-{{ride.id}}">Delete</button></p>
+    </div>
+  </section>
+
+{{/each}}

@@ -46,6 +46,7 @@ const onCreateRide = event => {
 const addRideEventHandlers = event => {
   $('#enter-new-ride-form').on('submit', onCreateRide)
   $('#view-ride-history-form').on('submit', onViewRides)
+  // $('#ride-history-table').on('click', '.done-btn', console.log('Button in Ride History Table works'))
 }
 
 module.exports = {

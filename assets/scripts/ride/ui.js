@@ -10,10 +10,32 @@ const onCreateRideFailure = () => {
   $('#user-output').html('Could Not Create a New Ride. Please Try Again')
 }
 
-// const showRidesTemplate = require('../templates/ride-listing.handlebars')
+const showRidesTemplate = require('../templates/ride-listing.handlebars')
+
+const formatRideTime = rideData => {
+  rideData.rides.forEach(ride => {
+    ride.HH = Math.floor(ride.ride_time / 3600)
+    ride.MM = Math.floor(ride.ride_time / 60) - (ride.HH * 60)
+    ride.SS = Math.floor(ride.ride_time) - (ride.HH * 3600) - (ride.MM * 60)
+    ride.HH = ride.HH.toString()
+    ride.MM = ride.MM.toString()
+    ride.SS = ride.SS.toString()
+    if (ride.MM.length === 1) {
+      ride.MM = '0' + ride.MM
+    }
+    if (ride.SS.length === 1) {
+      ride.SS = '0' + ride.SS
+    }
+  })
+  return rideData
+}
 
 const onGetRidesSuccess = rideData => {
   console.log(rideData)
+  const convertedRideData = formatRideTime(rideData)
+  console.log(convertedRideData)
+  const showRidesHTML = showRidesTemplate({ rides: convertedRideData.rides })
+  $('#ride-history-table').html(showRidesHTML)
 }
 
 const onGetRidesFailure = () => {
