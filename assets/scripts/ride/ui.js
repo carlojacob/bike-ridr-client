@@ -10,7 +10,7 @@ const onCreateRideFailure = () => {
   $('#user-output').html('Could Not Create a New Ride. Please Try Again')
 }
 
-const showRidesTemplate = require('../templates/ride-listing.handlebars')
+// const showRidesTemplate = require('../templates/ride-listing.handlebars')
 
 const onGetRidesSuccess = rideData => {
   console.log(rideData)
@@ -19,27 +19,30 @@ const onGetRidesSuccess = rideData => {
 const onGetRidesFailure = () => {
   $('#user-output').html('Could Not Get Ride History. Please Try Again')
 }
+
 // ************************************************ //
 
-const getBooksSuccess = (data) => {
-  console.log(data)
-  const showBooksHtml = showBooksTemplate({ books: data.books })
-  $('.content').html(showBooksHtml)
-}
+// const getBooksSuccess = (data) => {
+//   console.log(data)
+//   const showBooksHtml = showBooksTemplate({ books: data.books })
+//   $('.content').html(showBooksHtml)
+// }
+//
+// const clearBooks = () => {
+//   $('.content').empty()
+// }
+//
+// const failure = (error) => {
+//   console.error(error)
+// }
+//
+// module.exports = {
+//   getBooksSuccess,
+//   clearBooks,
+//   failure
+// }
 
-const clearBooks = () => {
-  $('.content').empty()
-}
-
-const failure = (error) => {
-  console.error(error)
-}
-
-module.exports = {
-  getBooksSuccess,
-  clearBooks,
-  failure
-}
+// ************************************************ //
 
 module.exports = {
   onCreateRideSuccess,
