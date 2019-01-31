@@ -42,30 +42,6 @@ const onGetRidesFailure = () => {
   $('#user-output').html('Could Not Get Ride History. Please Try Again')
 }
 
-// ************************************************ //
-
-// const getBooksSuccess = (data) => {
-//   console.log(data)
-//   const showBooksHtml = showBooksTemplate({ books: data.books })
-//   $('.content').html(showBooksHtml)
-// }
-//
-// const clearBooks = () => {
-//   $('.content').empty()
-// }
-//
-// const failure = (error) => {
-//   console.error(error)
-// }
-//
-// module.exports = {
-//   getBooksSuccess,
-//   clearBooks,
-//   failure
-// }
-
-// ************************************************ //
-
 module.exports = {
   onCreateRideSuccess,
   onCreateRideFailure,
