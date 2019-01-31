@@ -14,6 +14,17 @@ const createRide = rideData => {
   })
 }
 
+const getRides = () => {
+  return $.ajax({
+    url: config.apiUrl + '/rides',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
+  getRides,
   createRide
 }

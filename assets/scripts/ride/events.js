@@ -5,6 +5,16 @@ const store = require('../store')
 const api = require('./api')
 const ui = require('./ui')
 
+const onViewRides = () => {
+  event.preventDefault()
+
+  api.getRides()
+    .then(ui.onGetRidesSuccess)
+    .catch(ui.getRidesFailure)
+
+  $('form').trigger('reset')
+}
+
 // Function to convert H:M:S time inputs to seconds.
 const convertTimeToSeconds = formData => {
   formData.ride.ride_time = (formData.ride.HH * 60 * 60) + (formData.ride.MM * 60) + parseInt(formData.ride.SS)
@@ -30,6 +40,7 @@ const onCreateRide = event => {
 
 const addRideEventHandlers = event => {
   $('#enter-new-ride-form').on('submit', onCreateRide)
+  $('#view-ride-history-form').on('submit', onViewRides)
 }
 
 module.exports = {
