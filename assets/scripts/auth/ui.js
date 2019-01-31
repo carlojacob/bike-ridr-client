@@ -5,12 +5,12 @@ const store = require('../store')
 
 // Action(s) to perform on successful API request on sign up
 const onSignUpSuccess = () => {
-  $('#user-output').text('Account Successfully Created')
+  $('#user-output').html('Account Successfully Created')
 }
 
 // Action(s) to perform on failed API request on sign up
 const onSignUpFailure = () => {
-  $('#user-output').text('Account Could Not Be Created')
+  $('#user-output').html('Account Could Not Be Created')
 }
 
 // Action(s) to perform on successful API request on sign in
@@ -29,17 +29,16 @@ const onSignInSuccess = responseData => {
   // $('#change-password-sign-out').show()
   // store user data for current session
   store.user = responseData.user
-  console.log(store)
 }
 
 // Action(s) to perform on failed API request on sign in
 const onSignInFailure = () => {
-  $('#user-output').text('Could Not Sign In. Please Try Again')
+  $('#user-output').html('Could Not Sign In. Please Try Again')
 }
 
 // Action(s) to perform on successful API request on change password
 const onChangePasswordSuccess = formData => {
-  $('#user-output').text('Password Changed. Please Record Your New Password')
+  $('#user-output').html('Password Changed. Please Record Your New Password')
 }
 
 // Action(s) to perform on failed API request on change password
@@ -66,7 +65,7 @@ const onSignOutSuccess = responseData => {
 
 // Action(s) to perform on failed API request on sign out
 const onSignOutFailure = () => {
-  $('#user-output').text('Could Not Sign Out')
+  $('#user-output').html('Could Not Sign Out')
 }
 
 module.exports = {

@@ -15,7 +15,6 @@ const signUp = formData => {
 
 // API request using AJAX (POST) for click on sign in button
 const signIn = formData => {
-  console.log(formData)
   return $.ajax({
     url: config.apiUrl + '/sign-in',
     method: 'POST',
