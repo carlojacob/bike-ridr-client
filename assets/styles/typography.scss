@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Serpentine-MediumOblique';
+  src: url('public/Serpentine-MediumOblique.otf') format('opentype');
+}
+
+h1 {
+  font-family: 'Serpentine-MediumOblique', cursive;
+  font-size: 80px;
+}
+
+// ultra-condensed	Makes the text as narrow as it gets
+// extra-condensed	Makes the text narrower than condensed, but not as narrow as ultra-condensed
+// condensed	Makes the text narrower than semi-condensed, but not as narrow as extra-condensed
+// semi-condensed	Makes the text narrower than normal, but not as narrow as condensed
+// normal	Default value. No font stretching
+// semi-expanded	Makes the text wider than normal, but not as wide as expanded
+// expanded	Makes the text wider than semi-expanded, but not as wide as extra-expanded
+// extra-expanded	Makes the text wider than expanded, but not as wide as ultra-expanded
+// ultra-expanded	Makes the text as wide as it gets
