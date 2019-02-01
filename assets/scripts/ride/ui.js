@@ -33,9 +33,15 @@ const formatRideTime = rideData => {
 }
 
 const onGetRidesSuccess = rideData => {
-  const convertedRideData = formatRideTime(rideData)
-  const showRidesHTML = showRidesTemplate({ rides: convertedRideData.rides })
-  $('#ride-history-table').html(showRidesHTML)
+  if (rideData.rides.length === 0) {
+    $('#user-output').html('You Have No Saved Rides! Enter a New Ride!')
+    displaySetup.goToLanding()
+  } else {
+    displaySetup.goToRideHistory()
+    const convertedRideData = formatRideTime(rideData)
+    const showRidesHTML = showRidesTemplate({ rides: convertedRideData.rides })
+    $('#ride-history-table').html(showRidesHTML)
+  }
 }
 
 const onGetRidesFailure = () => {

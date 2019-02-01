@@ -10,7 +10,6 @@ let rideId
 
 const onViewRides = event => {
   event.preventDefault()
-  displaySetup.goToRideHistory()
 
   api.getRides()
     .then(ui.onGetRidesSuccess)
