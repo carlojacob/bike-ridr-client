@@ -6,6 +6,7 @@ const displaySetup = require('../display/display')
 
 // Action(s) to perform on successful API request on sign up
 const onSignUpSuccess = () => {
+  // $('#exampleModalCenter').modal('toggle')
   $('#user-output').html('Account Successfully Created')
 }
 

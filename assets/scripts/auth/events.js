@@ -53,6 +53,10 @@ const addAuthEventHandlers = event => {
   $('#sign-in').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
+  // $('#exampleModalCenter').on('hidden.bs.modal', function () {
+  //   $('#example-form').trigger('reset')
+  // })
+  // $('#example-form').on('submit', onSignUp)
 }
 
 module.exports = {
