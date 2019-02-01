@@ -2,6 +2,7 @@
 
 // Require files referenced in this document
 const store = require('../store')
+const displaySetup = require('../display/display')
 
 // Action(s) to perform on successful API request on sign up
 const onSignUpSuccess = () => {
@@ -15,6 +16,7 @@ const onSignUpFailure = () => {
 
 // Action(s) to perform on successful API request on sign in
 const onSignInSuccess = responseData => {
+  displaySetup.goToLanding()
   $('#user-output').html('Successfully Signed In. Did you ride today?')
   // $('#user-output').append('<p>Player X\'s turn<p>')
   // // hide sign-up and sign-in container
@@ -48,6 +50,7 @@ const onChangePasswordFailure = () => {
 
 // Action(s) to perform on successful API request on sign out
 const onSignOutSuccess = responseData => {
+  displaySetup.goToSignedOut()
   $('#user-output').text('Successfully Signed Out. Have a Great Day!')
   // // show sign-up and sign-in container
   // $('#sign-up-or-in').show()

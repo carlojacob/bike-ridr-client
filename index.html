@@ -69,7 +69,7 @@
       <!-- End Sign Up and Sign In Areas -->
 
       <!-- Output Text to User During Use of App -->
-      <div class="container user-output">
+      <div class="container user-output-container">
         <div class="row">
           <div class="col-12 col-xl-12 user-output standard">
             <p id="user-output"></p>
@@ -83,16 +83,12 @@
         <div class="row">
           <!-- Enter New Ride Button -->
           <div class="col-12 col-sm-6 ride-button-form standard">
-            <form class="credentials" id="enter-new-ride">
-              <button id="enter-new-ride-btn">Enter New Ride</button>
-            </form>
+            <button id="enter-new-ride-btn">Enter New Ride</button>
           </div>
           <!-- End Enter New Ride Button -->
           <!-- View Ride History Button -->
           <div class="col-12 col-sm-6 ride-button-form standard">
-            <form class="credentials" id="view-ride-history-form">
-              <button id="view-ride-history-btn">View Ride History</button>
-            </form>
+            <button id="view-ride-history-btn">View Ride History</button>
           </div>
           <!-- End View Ride History Button -->
         </div>
@@ -104,7 +100,7 @@
         <div class="row">
 
           <!-- Enter New Ride Form -->
-          <div class="col-12 col-sm-6 enter-new-ride-form standard">
+          <div class="col-12 col-sm-12 enter-new-ride-form standard">
             <form class="credentials" id="enter-new-ride-form">
               <p>Date<input type="date" name="ride[date]"></p>
               <input type="text" name="ride[location]" placeholder="Location">

@@ -7,6 +7,9 @@
 // require('./example')
 const authenticationEvents = require('./auth/events')
 const rideEvents = require('./ride/events')
+const displaySetup = require('./display/display')
+
+displaySetup.goToSignedOut()
 
 $(() => {
   authenticationEvents.addAuthEventHandlers(event)

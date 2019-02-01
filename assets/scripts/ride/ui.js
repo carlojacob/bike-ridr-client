@@ -1,5 +1,7 @@
 'use strict'
 
+const displaySetup = require('../display/display')
+
 // Action(s) to perform on successful API request to create ride
 const onCreateRideSuccess = formData => {
   $('#user-output').html('Congratulations on Your New Ride!')
@@ -42,6 +44,7 @@ const onGetRidesFailure = () => {
 
 const onUpdateRideSuccess = () => {
   $('#user-output').html('Ride Updated!')
+  displaySetup.goToLanding()
   // const convertedRideData = formatRideTime(rideData)
   // const showRidesHTML = showRidesTemplate({ rides: convertedRideData.rides })
   // $('#ride-history-table').html(showRidesHTML)
@@ -51,11 +54,16 @@ const onUpdateRideFailure = () => {
   $('#user-output').html('Could Not Update Ride Data. Please Try Again')
 }
 
+const onDeleteRideFailure = () => {
+  $('#user-output').html('Could Not Update Ride Data. Please Try Again')
+}
+
 module.exports = {
   onCreateRideSuccess,
   onCreateRideFailure,
   onGetRidesSuccess,
   onGetRidesFailure,
   onUpdateRideSuccess,
-  onUpdateRideFailure
+  onUpdateRideFailure,
+  onDeleteRideFailure
 }
