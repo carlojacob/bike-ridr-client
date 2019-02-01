@@ -24,7 +24,30 @@ const getRides = () => {
   })
 }
 
+const updateRide = (rideData, rideId) => {
+  return $.ajax({
+    url: config.apiUrl + '/rides/' + rideId,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: rideData
+  })
+}
+
+const deleteRide = rideId => {
+  return $.ajax({
+    url: config.apiUrl + '/rides/' + rideId,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   getRides,
-  createRide
+  createRide,
+  updateRide,
+  deleteRide
 }

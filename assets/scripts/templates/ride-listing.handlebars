@@ -2,7 +2,7 @@
 
   <section data-id="{{ride.id}}">
     <div>
-      <p>{{ride.date}} {{limit ride.location 10}} {{ride.ride_distance}} {{ride.HH}}:{{ride.MM}}:{{ride.SS}} <button edit-btn-id="edit-btn-{{ride.id}}">Edit</button><button delete-btn-id="delete-btn-{{ride.id}}">Delete</button></p>
+      <p><div class="ride-data">{{ride.date}}</div><div class="ride-data">{{limit ride.location 10}}</div><div class="ride-data">{{ride.ride_distance}}</div><div class="ride-data">{{ride.HH}}:{{ride.MM}}:{{ride.SS}}</div> <button class="edit-btn">Edit</button><button class="delete-btn">Delete</button></p>
     </div>
   </section>
 

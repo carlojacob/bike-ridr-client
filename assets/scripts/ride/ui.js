@@ -16,10 +16,10 @@ const formatRideTime = rideData => {
   rideData.rides.forEach(ride => {
     ride.HH = Math.floor(ride.ride_time / 3600)
     ride.MM = Math.floor(ride.ride_time / 60) - (ride.HH * 60)
-    ride.SS = Math.floor(ride.ride_time) - (ride.HH * 3600) - (ride.MM * 60)
+    ride.SS = ride.ride_time.toFixed(2) - (ride.HH * 3600).toFixed(2) - (ride.MM * 60).toFixed(2)
     ride.HH = ride.HH.toString()
     ride.MM = ride.MM.toString()
-    ride.SS = ride.SS.toString()
+    ride.SS = ride.SS.toFixed(2)
     if (ride.MM.length === 1) {
       ride.MM = '0' + ride.MM
     }
@@ -31,9 +31,7 @@ const formatRideTime = rideData => {
 }
 
 const onGetRidesSuccess = rideData => {
-  console.log(rideData)
   const convertedRideData = formatRideTime(rideData)
-  console.log(convertedRideData)
   const showRidesHTML = showRidesTemplate({ rides: convertedRideData.rides })
   $('#ride-history-table').html(showRidesHTML)
 }
@@ -42,9 +40,22 @@ const onGetRidesFailure = () => {
   $('#user-output').html('Could Not Get Ride History. Please Try Again')
 }
 
+const onUpdateRideSuccess = () => {
+  $('#user-output').html('Ride Updated!')
+  // const convertedRideData = formatRideTime(rideData)
+  // const showRidesHTML = showRidesTemplate({ rides: convertedRideData.rides })
+  // $('#ride-history-table').html(showRidesHTML)
+}
+
+const onUpdateRideFailure = () => {
+  $('#user-output').html('Could Not Update Ride Data. Please Try Again')
+}
+
 module.exports = {
   onCreateRideSuccess,
   onCreateRideFailure,
   onGetRidesSuccess,
-  onGetRidesFailure
+  onGetRidesFailure,
+  onUpdateRideSuccess,
+  onUpdateRideFailure
 }

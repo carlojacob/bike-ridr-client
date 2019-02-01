@@ -104,7 +104,7 @@
         <div class="row">
 
           <!-- Enter New Ride Form -->
-          <div class="col-12 col-sm-6 enter-ride-form standard">
+          <div class="col-12 col-sm-6 enter-new-ride-form standard">
             <form class="credentials" id="enter-new-ride-form">
               <p>Date<input type="date" name="ride[date]"></p>
               <input type="text" name="ride[location]" placeholder="Location">
@@ -122,15 +122,38 @@
       </div>
       <!-- End New Ride Form Container -->
 
+      <!-- Enter Update Ride Form Container-->
+      <div id="update-ride-container" class="container">
+        <div class="row">
+
+          <!-- Enter New Ride Form -->
+          <div class="col-12 col-sm-6 update-ride-form standard">
+            <form class="credentials" id="update-ride-form">
+              <p>Date<input type="date" name="ride[date]"></p>
+              <input type="text" name="ride[location]" placeholder="Location">
+              <p>Time
+                <input type="number" min="0" name="ride[HH]" placeholder="HH">
+                <input type="number" min="0" max="60" name="ride[MM]" placeholder="MM">
+                <input type="number" step="0.01" min="0" max="60" name="ride[SS]" placeholder="SS">
+              </p>
+              <input type="number" step="0.01" name="ride[ride_distance]" placeholder="Distance (miles)">
+              <button id="update-ride-btn">Update Ride</button>
+            </form>
+          </div>
+          <!-- End Enter New Ride Form -->
+        </div>
+      </div>
+      <!-- End Update Ride Form Container -->
+
       <!-- Ride History Container-->
       <div id="ride-history-container" class="container">
         <div class="row">
 
           <!-- Ride History Table -->
           <div class="col-12 col-sm-12 ride-history-space standard">
-            <div id="ride-history-table">
-              <p><button id="done-btn">Done</button></p>
+            <div id="ride-history-table" class="ride-history-table">
             </div>
+            <p><button id="done-btn">Done</button></p>
           </div>
           <!-- End Ride History Table -->
         </div>

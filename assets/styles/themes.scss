@@ -2,7 +2,11 @@ body {
   margin: 0 auto;
   padding: 10px;
   text-align: center;
-  width: 70vmin;
+  width: 90vmin;
+}
+
+button {
+  width: 150px;
 }
 
 .auth-input {
@@ -15,4 +19,18 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+}
+
+.delete-btn {
+  width: auto;
+}
+
+.edit-btn {
+  width: auto;
+}
+
+.ride-data {
+  border: 1px solid black;
+  display: inline;
+  padding: 5px 15px;
 }

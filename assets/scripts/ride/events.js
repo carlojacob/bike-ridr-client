@@ -5,12 +5,14 @@ const store = require('../store')
 const api = require('./api')
 const ui = require('./ui')
 
+let rideId
+
 const onViewRides = () => {
   event.preventDefault()
 
   api.getRides()
     .then(ui.onGetRidesSuccess)
-    .catch(ui.getRidesFailure)
+    .catch(ui.onGetRidesFailure)
 
   $('form').trigger('reset')
 }
@@ -26,7 +28,7 @@ const convertFormData = formData => {
   return formData
 }
 
-// Handler for request to create a new game on user's account
+// Handler for request to create a new ride on user's account
 const onCreateRide = event => {
   event.preventDefault()
   const formData = getFormFields(event.target)
@@ -43,10 +45,47 @@ const onCreateRide = event => {
   $('form').trigger('reset')
 }
 
+const onDoneViewingRides = () => {
+  event.preventDefault()
+  // $('#ride-history-container').hide()
+  console.log('Done!')
+}
+
+const displayUpdateRideForm = isEdit => {
+  event.preventDefault()
+  rideId = $(event.target).closest('section').data('id')
+  console.log('Carlo, edit ride data now.')
+  // Add code to show "New Ride" form.
+  $('#update-ride-form').on('submit', onUpdateRide)
+}
+
+const onUpdateRide = event => {
+  event.preventDefault()
+  const formData = getFormFields(event.target)
+  const rideData = convertFormData(formData)
+  console.log(`Edited ${rideId}!`)
+
+  api.updateRide(rideData, rideId)
+    .then(ui.onUpdateRideSuccess)
+    .catch(ui.onUpdateRideFailure)
+}
+
+const onDeleteRide = () => {
+  event.preventDefault()
+  const rideId = $(event.target).closest('section').data('id')
+  console.log(`Deleted ${rideId}!`)
+
+  api.deleteRide(rideId)
+    .then(ui.onDeleteRideSuccess)
+    .catch(ui.onDeleteRideFailure)
+}
+
 const addRideEventHandlers = event => {
   $('#enter-new-ride-form').on('submit', onCreateRide)
   $('#view-ride-history-form').on('submit', onViewRides)
-  // $('#ride-history-table').on('click', '.done-btn', console.log('Button in Ride History Table works'))
+  $('#done-btn').on('click', onDoneViewingRides)
+  $('#ride-history-table').on('click', '.edit-btn', displayUpdateRideForm)
+  $('#ride-history-table').on('click', '.delete-btn', onDeleteRide)
 }
 
 module.exports = {
