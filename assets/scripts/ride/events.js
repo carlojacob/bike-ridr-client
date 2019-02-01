@@ -19,7 +19,7 @@ const onViewRides = event => {
   $('form').trigger('reset')
 }
 
-// Function to convert H:M:S time inputs to seconds.
+// Function to convert HH:MM:SS time inputs to seconds.
 const convertFormData = formData => {
   const currentRide = formData.ride
   if (currentRide.HH === '') {

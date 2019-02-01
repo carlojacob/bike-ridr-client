@@ -4,7 +4,7 @@ const displaySetup = require('../display/display')
 
 // Action(s) to perform on successful API request to create ride
 const onCreateRideSuccess = formData => {
-  $('#user-output').html('Congratulations on Your New Ride!')
+  $('#user-output').html('New Ride Saved!')
 }
 
 // Action(s) to perform on failed API request on change password

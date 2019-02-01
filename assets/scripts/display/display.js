@@ -1,5 +1,7 @@
 'use strict'
 
+const ui = require('./ui')
+
 const goToSignedOut = () => {
   $('#user-output-container').show()
   $('#sign-up-or-in').show()
@@ -22,6 +24,7 @@ const goToLanding = () => {
 
 const goToNewRide = () => {
   event.preventDefault()
+  ui.onGoToNewRide()
   $('#user-output-container').show()
   $('#sign-up-or-in').hide()
   $('#change-password-sign-out').hide()
@@ -32,6 +35,7 @@ const goToNewRide = () => {
 }
 
 const goToUpdateRide = () => {
+  ui.onGoToUpdateRide()
   $('#user-output-container').show()
   $('#sign-up-or-in').hide()
   $('#change-password-sign-out').hide()
@@ -42,6 +46,7 @@ const goToUpdateRide = () => {
 }
 
 const goToRideHistory = () => {
+  ui.onGoToRideHistory()
   $('#user-output-container').show()
   $('#sign-up-or-in').hide()
   $('#change-password-sign-out').hide()
