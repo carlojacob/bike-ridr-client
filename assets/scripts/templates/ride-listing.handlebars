@@ -1,9 +1,26 @@
 {{#each rides as |ride|}}
 
-  <section data-id="{{ride.id}}">
-    <div>
-      <p><div class="ride-data">{{ride.date}}</div><div class="ride-data">{{limit ride.location 10}}</div><div class="ride-data">{{ride.ride_distance}}</div><div class="ride-data">{{ride.HH}}:{{ride.MM}}:{{ride.SS}}</div> <button class="edit-btn">Edit</button><button class="delete-btn">Delete</button></p>
+  <!-- <section data-id="{{ride.id}}" class="ride-history-space standard"> -->
+    <div class="col-2 col-sm-2 col-lg-2">
+      <div class="ride-data">{{ride.date}}</div>
     </div>
-  </section>
+    <div class="col-3 col-sm-3 col-lg-3">
+      <div class="ride-data">{{limit ride.location 10}}</div>
+    </div>
+    <div class="col-2 col-sm-2 col-lg-2">
+      <div class="ride-data">{{ride.ride_distance}} miles</div>
+    </div>
+    <div class="col-2 col-sm-2 col-lg-2">
+      <div class="ride-data">{{ride.HH}}:{{ride.MM}}:{{ride.SS}}</div>
+    </div>
+    <!-- <div class="col-0.1 col-sm-0.1 col-lg-0.1">
+    </div> -->
+    <div data-id="{{ride.id}}" class="col-2.95 col-sm-2.95 col-lg-2.95">
+      <button class="edit-btn">Edit</button>
+    <!-- </div>
+    <div data-id="{{ride.id}}" class="col-1.5 col-sm-1.5 col-lg-1.5"> -->
+      <button class="delete-btn">Delete</button>
+    </div>
+  <!-- </section> -->
 
 {{/each}}
