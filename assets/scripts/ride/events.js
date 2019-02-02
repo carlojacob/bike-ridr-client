@@ -66,7 +66,7 @@ const onDoneViewingRides = () => {
 const displayUpdateRideForm = isEdit => {
   event.preventDefault()
   displaySetup.goToUpdateRide()
-  rideId = $(event.target).closest('section').data('id')
+  rideId = $(event.target).closest('div').data('id')
   $('#update-ride-form').on('submit', onUpdateRide)
 }
 
@@ -82,7 +82,7 @@ const onUpdateRide = event => {
 
 const onDeleteRide = event => {
   event.preventDefault()
-  const rideId = $(event.target).closest('section').data('id')
+  const rideId = $(event.target).closest('div').data('id')
 
   api.deleteRide(rideId)
     .then(() => onViewRides(event))

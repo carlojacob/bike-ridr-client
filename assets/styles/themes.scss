@@ -1,11 +1,22 @@
+$border-and-text-white: $traffic-white;
+$table-background: $near-black;
+$button-background: $contrast-to-yellow;
+$button-border: $traffic-yellow;
+
 body {
+  background-image: url('../../public/asphalt_texture3729.jpg');
   margin: 0 auto;
   padding: 10px;
   text-align: center;
-  width: 90vmin;
+  width: 90%;
 }
 
 button {
+  background-color: $button-background;
+  border: 2px solid $button-border;
+  border-radius: 5px;
+  color: $border-and-text-white;
+  margin: 10px auto;
   width: 150px;
 }
 
@@ -22,15 +33,46 @@ button {
 }
 
 .delete-btn {
-  width: auto;
+  line-height: 35px;
+  margin: 0 auto;
+  width: 70px;
+}
+
+.done-btn {
+  margin: 20px;
 }
 
 .edit-btn {
-  width: auto;
+  line-height: 35px;
+  margin: 0 auto;
+  width: 70px;
+}
+
+.form-text {
+  color: $border-and-text-white;
+  display: inline;
+  font-family: 'Serpentine-MediumOblique';
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-right: 5px;
 }
 
 .ride-data {
-  border: 1px solid black;
-  display: inline;
-  padding: 5px 15px;
+  background-color: $table-background;
+  border: 1px solid $border-and-text-white;
+  color: $border-and-text-white;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 -15px;
+}
+
+.user-output {
+  color: $border-and-text-white;
+  font-family: 'Serpentine-MediumOblique';
+  font-size: 30px;
+  font-weight: bold;
+  height: 60px;
+  letter-spacing: 3px;
+  line-height: 60px;
 }

@@ -25,7 +25,7 @@ const formatRideTime = rideData => {
     if (ride.MM.length === 1) {
       ride.MM = '0' + ride.MM
     }
-    if (ride.SS.length === 1) {
+    if (ride.SS.length === 4) {
       ride.SS = '0' + ride.SS
     }
   })
