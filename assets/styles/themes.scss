@@ -33,7 +33,7 @@ button {
 }
 
 .delete-btn {
-  line-height: 35px;
+  line-height: 33px;
   margin: 0 auto;
   width: 70px;
 }
@@ -43,7 +43,7 @@ button {
 }
 
 .edit-btn {
-  line-height: 35px;
+  line-height: 33px;
   margin: 0 auto;
   width: 70px;
 }
@@ -62,9 +62,10 @@ button {
   background-color: $table-background;
   border: 1px solid $border-and-text-white;
   color: $border-and-text-white;
+  // display: flex;
   height: 40px;
   line-height: 40px;
-  margin: 0 -15px;
+  // margin: 0 -15px;
 }
 
 .user-output {
