@@ -3,21 +3,26 @@ $table-background: $near-black;
 $button-background: $contrast-to-yellow;
 $button-border: $traffic-yellow;
 
+$body-width: 90%;
+$time-input-width: 100% / 3;
+$ride-form-width: 70%;
+
 body {
   background-image: url('public/asphalt_texture3729.jpg');
   margin: 0 auto;
   padding: 10px;
   text-align: center;
-  width: 90%;
+  width: $body-width;
 }
 
 button {
   background-color: $button-background;
-  border: 2px solid $button-border;
-  border-radius: 5px;
+  border: 8px solid $button-border;
+  border-radius: 75px;
   color: $border-and-text-white;
+  height: 100px;
   margin: 10px auto;
-  width: 150px;
+  width: 100px;
 }
 
 .auth-input {
@@ -50,12 +55,16 @@ button {
 
 .form-text {
   color: $border-and-text-white;
-  display: inline;
+  // display: inline;
   font-family: 'Serpentine-MediumOblique';
   font-size: 24px;
   font-weight: bold;
   letter-spacing: 3px;
-  margin-right: 5px;
+  // margin-right: 5px;
+}
+
+.ride-form {
+  width: $ride-form-width;
 }
 
 .ride-data {
@@ -66,6 +75,34 @@ button {
   height: 40px;
   line-height: 40px;
   // margin: 0 -15px;
+}
+
+.full-width {
+  margin: 5px auto;
+  width: 100%;
+}
+
+.ride-time-input {
+  padding: 0;
+  width: 90%;
+}
+
+.time-input {
+  margin: 5px 0;
+  width: 90%;
+
+  &.left {
+    float: left;
+  }
+
+  &.right {
+    float: right;
+  }
+}
+
+.location-input {
+  margin: 5px auto;
+  width: 100%;
 }
 
 .user-output {
