@@ -91,10 +91,8 @@ const onDeleteRide = event => {
 const addRideEventHandlers = event => {
   $('#enter-new-ride-btn').on('click', displaySetup.goToNewRide)
   $('#view-ride-history-btn').on('click', onViewRides)
-  // $('#enter-new-ride-form').on('submit', onCreateRide)
-  $('#enter-new-ride-form-test').on('submit', onCreateRide)
-  // $('#update-ride-form').on('submit', onUpdateRide)
-  $('#update-ride-form-test').on('submit', onUpdateRide)
+  $('#enter-new-ride-form').on('submit', onCreateRide)
+  $('#update-ride-form').on('submit', onUpdateRide)
   $('#view-ride-history-btn').on('click', onViewRides)
   $('#done-btn').on('click', onDoneViewingRides)
   $('#ride-history-table').on('click', '.edit-btn', displayUpdateRideForm)
