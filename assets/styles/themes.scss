@@ -18,7 +18,7 @@ body {
 button {
   background-color: $button-background;
   border: 8px solid $button-border;
-  border-radius: 75px;
+  border-radius: 50px;
   color: $border-and-text-white;
   height: 100px;
   margin: 10px auto;
@@ -37,9 +37,12 @@ button {
   text-align: center;
 }
 
-.delete-btn {
-  line-height: 33px;
-  margin: 0 auto;
+.delete-edit-btn {
+  border: 3px solid $button-border;
+  border-radius: 5px;
+  height: 34px;
+  line-height: 24px;
+  margin: 3px auto;
   width: 70px;
 }
 
@@ -47,20 +50,12 @@ button {
   margin: 20px;
 }
 
-.edit-btn {
-  line-height: 33px;
-  margin: 0 auto;
-  width: 70px;
-}
-
 .form-text {
   color: $border-and-text-white;
-  // display: inline;
   font-family: 'Serpentine-MediumOblique';
   font-size: 24px;
   font-weight: bold;
   letter-spacing: 3px;
-  // margin-right: 5px;
 }
 
 .ride-form {
