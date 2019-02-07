@@ -8,7 +8,9 @@ const goToSignedOut = () => {
   $('#change-password-sign-out').hide()
   $('#enter-or-view-ride').hide()
   $('#enter-new-ride-container').hide()
+  $('#enter-new-ride-form-test').hide()
   $('#update-ride-container').hide()
+  $('#update-ride-form-test').hide()
   $('#ride-history-container').hide()
 }
 
@@ -18,7 +20,9 @@ const goToLanding = () => {
   $('#change-password-sign-out').show()
   $('#enter-or-view-ride').show()
   $('#enter-new-ride-container').hide()
+  $('#enter-new-ride-form-test').hide()
   $('#update-ride-container').hide()
+  $('#update-ride-form-test').hide()
   $('#ride-history-container').hide()
 }
 
@@ -30,7 +34,9 @@ const goToNewRide = () => {
   $('#change-password-sign-out').hide()
   $('#enter-or-view-ride').hide()
   $('#enter-new-ride-container').show()
+  $('#enter-new-ride-form-test').show()
   $('#update-ride-container').hide()
+  $('#update-ride-form-test').hide()
   $('#ride-history-container').hide()
 }
 
@@ -41,7 +47,9 @@ const goToUpdateRide = () => {
   $('#change-password-sign-out').hide()
   $('#enter-or-view-ride').hide()
   $('#enter-new-ride-container').hide()
+  $('#enter-new-ride-form-test').hide()
   $('#update-ride-container').show()
+  $('#update-ride-form-test').show()
   $('#ride-history-container').hide()
 }
 
@@ -52,7 +60,9 @@ const goToRideHistory = () => {
   $('#change-password-sign-out').hide()
   $('#enter-or-view-ride').hide()
   $('#enter-new-ride-container').hide()
+  $('#enter-new-ride-form-test').hide()
   $('#update-ride-container').hide()
+  $('#update-ride-form-test').hide()
   $('#ride-history-container').show()
 }
 
