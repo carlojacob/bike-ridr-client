@@ -3,11 +3,12 @@ $table-background: $near-black;
 $button-background: $contrast-to-yellow;
 $button-border: $traffic-yellow;
 
-$body-width: 90%;
+$body-width: 100%;
 $time-input-width: 100% / 3;
 $ride-form-width: 70%;
 
 body {
+  background-attachment: fixed;
   background-image: url('public/asphalt_texture3729.jpg');
   margin: 0 auto;
   padding: 10px;
@@ -101,11 +102,6 @@ button {
   &.right {
     float: right;
   }
-}
-
-.location-input {
-  margin: 5px auto;
-  width: 100%;
 }
 
 .user-output {
